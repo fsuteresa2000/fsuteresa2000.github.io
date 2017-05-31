@@ -1,30 +1,141 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+	<meta charset="utf-8">
+	<title> Teresa Vann</title>
+	<meta name="description" content="A personal portfolio and blog website">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-Frame-Options" content="sameorigin">
 
-<div class="home">
+	<!-- CSS -->
+	<link rel="stylesheet" href="/css/main.css">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+	<!-- Canonical -->
+	<link rel="canonical" href="http://localhost:4000/">
+
+	<!-- RSS -->
+	<link rel="alternate" type="application/atom+xml" title="Teresa Vann" href="http://localhost:4000/feed.xml" />
+
+	<!-- Font Awesome -->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Google Fonts -->
+
+	<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,700italic|Abril+Fatface" rel="stylesheet" type="text/css">
+
+
+	<!-- KaTeX -->
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.3.0/katex.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.3.0/katex.min.js"></script>
+
+
+	<!-- Google Analytics -->
+
+</head>
+
+  <body>
+    <header class="site-header">
+	<nav class="site-nav">
+		<ul>
+			<li>
+				<a class="page-link" href="/about/">
+					About
+				</a>
+			</li>
+
+			<li>
+				<a class="page-link" href="/contact/">
+					Contact
+				</a>
+			</li>
+		</ul>
+	</nav>
+
+  <div class="call-out"
+  style="background-image: url('/')">
+  	<h1 class="site-title">
+			<a href="/">Teresa Vann</a>
+		</h1>
+		<div class="divider"></div>
+    <h1>Hi! I'm Teresa.</h1> <p>Let's create something great.</p>
+
+    <div class="divider"></div>
+    <!-- Social icons from Font Awesome, if enabled -->
+	  <ul>
+
+<li>
+	<a href="mailto:fsuteresa2000@yahoo.com" title="Email">
+		<i class="fa fa-fw fa-envelope"></i>
+	</a>
+</li>
+
+<li>
+	<a href="https://github.com/fsuteresa2000" title="Follow on GitHub">
+		<i class="fa fa-fw fa-github"></i>
+	</a>
+</li>
+
+<li>
+	<a href="http://instagram.com/fsuteresa2000" title="Follow on Instagram">
+		<i class="fa fa-fw fa-instagram"></i>
+	</a>
+</li>
+
+<li>
+	<a href="http://www.pinterest.com/fsuteresa2000" title="Follow on Pinterest">
+		<i class="fa fa-fw fa-pinterest"></i>
+	</a>
+</li>
+
+<li>
+	<a href="https://twitter.com/fsuteresa2000" title="Follow on Twitter">
+		<i class="fa fa-fw fa-twitter"></i>
+	</a>
+</li>
+
+		</ul>
+  </div>
+
+</header>
+<div class="content">
 
   <div class="work">
     <h2>My Work</h2>
-    {% for project in site.portfolio limit:3 %}
+
     <div class="project">
       <div class="project-thumb">
-        <a href="{{ project.url | prepend: site.baseurl }}">
-          <img src="{{ project.thumbnail-path }}" alt="{{ project.title }}"/>
+        <a href="portfolio/blocjams">
+          <img src="img/blocjams.png" alt="Bloc Jams"/>
         </a>
       </div>
       <div class="project-description">
-        <a href="{{ project.url | prepend: site.baseurl }}"><strong>{{ project.title }}</strong></a>
-        <p>{{ project.short-description }}</p>
+        <a href="portfolio/blocjams"><strong>Bloc Jams</strong></a>
+        <p>Bloc Jams is a digital music player similar to Spotify that was created by combining jQuery, JavaScript, HTML, and CSS. This web application was then refactored to use Google’s AngularJS framework.</p>
       </div>
     </div>
-    {% endfor %}
+
+      <div class="project">
+        <div class="project-thumb">
+          <a href="portfolio/blocchat">
+            <img src="img/blocchat.png" alt="Bloc Chat"/>
+          </a>
+        </div>
+        <div class="project-description">
+          <a href="portfolio/blocchat"><strong>Bloc Chat</strong></a>
+          <p>Bloc chat is a chat room that allows users to register an account for the site, create chat rooms, and post and send messages.</p>
+        </div>
+      </div>
+
   </div>
 
   <div class="posts">
     <h2 class="post-header">My Posts</h2>
     <ul>
-      {% for post in paginator.posts %}
+
       <li class="post-teaser">
         <header>
           <h3>
