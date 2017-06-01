@@ -139,39 +139,54 @@
       <li class="post-teaser">
         <header>
           <h3>
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-              {{ post.title }}
+            <a class="post-link" href="/2017/05/31/its-all-about-me.html">
+              It's All About Me
             </a>
           </h3>
           <p class="meta">
-            {{ post.date | date: "%B %-d, %Y" }}
+             May 31, 2017
           </p>
         </header>
         <div class="excerpt">
-          {{ post.excerpt | | strip_html | strip_newlines | truncate: 120 }}
+          Hi, my name is Teresa, and I currently live in Daphne, Alabama with my husband and our two dogs...
         </div>
-        <a href="{{ post.url | prepend: site.baseurl }}">
-          {{ site.theme_settings.str_continue_reading }}
+        <a href="/2017/05/31/its-all-about-me.html">
+
+      <li class="post-teaser">
+        <header>
+          <h3>
+            <a class="post-link" href="/2017/06/01/bloc-for-old-people.html">
+              Bloc for Old People
+            </a>
+          </h3>
+          <p class="meta">
+            June 1, 2017
+          </p>
+        </header>
+        <div class="excerpt">
+          While I don't consider myself "old," I am definitely "advanced" for a typical Bloc student...
+        </div>
+        <a href="/2017/06/01/bloc-for-old-people.html">
         </a>
       </li>
-      {% endfor %}
+
+          <li class="post-teaser">
+            <header>
+              <h3>
+                <a class="post-link" href="/2017/06/01/coding-as-a-foreign-language.html">
+                  Coding as a Foreign Language
+                </a>
+              </h3>
+              <p class="meta">
+                 June 1, 2017
+              </p>
+            </header>
+            <div class="excerpt">
+              "Estoy hambriento." "J'aimerais voir un ours panda s'il vous plaît ." "Vorrei un bicchiere di vino per favore." "Write a function which takes in numbers num1 and num2 and returns 1 if..."
+            </div>
+            <a href="/2017/06/01/coding-as-a-foreign-language.html">
+            </a>
+          </li>
+
     </ul>
   </div>
-
-  {% if paginator.total_pages > 1 %}
-  <div class="pagination">
-    {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button" >
-      <i class="fa fa-chevron-left"></i>
-      {{ site.theme_settings.str_prev }}
-    </a>
-    {% endif %}
-    {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button" >
-      {{ site.theme_settings.str_next }}
-      <i class="fa fa-chevron-right"></i>
-    </a>
-    {% endif %}
-  </div>
-  {% endif %}
-</div>
